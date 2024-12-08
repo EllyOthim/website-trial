@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Role Signup</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sign up for an account</h1>
+        
+        <div class="form-section active" id="role-selection">
+            <h2>Choose your role</h2>
+            <div class="role-selection">
+                <button class="role-btn" onclick="showForm('buyer')">Buyer</button>
+                <button class="role-btn" onclick="showForm('seller')">Seller</button>
+                <button class="role-btn" onclick="showForm('professional')">Professional</button>
+            </div>
+        </div>
+
+        <div class="form-section" id="buyer-form">
+            <h2>Buyer Sign Up</h2>
+            <form>
+                <div class="form-group">
+                    <label for="buyer-name">Name</label>
+                    <input type="text" id="buyer-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="buyer-email">Email</label>
+                    <input type="email" id="buyer-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="buyer-password">Password</label>
+                    <input type="password" id="buyer-password" required>
+                </div>
+                <button type="submit" class="submit-btn">Sign Up as Buyer</button>
+            </form>
+        </div>
+
+        <div class="form-section" id="seller-form">
+            <h2>Seller Sign Up</h2>
+            <form>
+                <div class="form-group">
+                    <label for="seller-name">Name</label>
+                    <input type="text" id="seller-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="seller-email">Email</label>
+                    <input type="email" id="seller-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="seller-password">Password</label>
+                    <input type="password" id="seller-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="seller-company">Company Name</label>
+                    <input type="text" id="seller-company" required>
+                </div>
+                <button type="submit" class="submit-btn">Sign Up as Seller</button>
+            </form>
+        </div>
+
+        <div class="form-section" id="professional-form">
+            <h2>Professional Sign Up</h2>
+            <form>
+                <div class="form-group">
+                    <label for="prof-name">Name</label>
+                    <input type="text" id="prof-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="prof-email">Email</label>
+                    <input type="email" id="prof-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="prof-password">Password</label>
+                    <input type="password" id="prof-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="prof-profession">Profession</label>
+                    <select id="prof-profession" required>
+                        <option value="">Select your profession</option>
+                        <option value="doctor">Doctor</option>
+                        <option value="lawyer">Lawyer</option>
+                        <option value="engineer">Engineer</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="prof-specialization">Specialization</label>
+                    <input type="text" id="prof-specialization" required>
+                </div>
+                <button type="submit" class="submit-btn">Sign Up as Professional</button>
+            </form>
+        </div>
+
+        <div class="signin-toggle">
+            Already have an account? <a href="#" class="signin-link">Sign In</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
